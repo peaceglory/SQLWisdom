@@ -1,4 +1,4 @@
-select od.orderNumber, c.customerName, sum(od.quantityOrdered * od.priceEach) as grandTotal
+select od.orderNumber, o.orderDate, c.customerName, sum(od.quantityOrdered * od.priceEach) as grandTotal
 
 from orderdetails od
 inner join orders o on od.orderNumber = o.orderNumber
